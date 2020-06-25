@@ -35,10 +35,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignIn(props) {
+const SignIn = (props) => {
   const classes = useStyles();
 
-  const handleClick = () => {
+  const handleLoginClick = () => {
     auth.login( () => {
       props.history.push('/');
     });
@@ -87,7 +87,7 @@ export default function SignIn(props) {
             variant="contained"
             color="primary"
             className={classes.submit}
-            onClick={handleClick}
+            onClick={handleLoginClick}
           >
             Sign In
           </Button>
@@ -111,3 +111,4 @@ export default function SignIn(props) {
     </Container>
   );
 }
+export default SignIn;
