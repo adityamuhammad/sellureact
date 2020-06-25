@@ -15,6 +15,7 @@ import Container from '@material-ui/core/Container';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import FaceTwoToneIcon from '@material-ui/icons/FaceTwoTone';
 import MainMenuList from './MainMenuList';
 import SecondaryMenuList from './SecondaryMenuList';
 import Copyright from './Copyright';
@@ -131,6 +132,9 @@ export default function Layout(props) {
             <Badge badgeContent={4} color="secondary">
               <NotificationsIcon />
             </Badge>
+          </IconButton>
+          <IconButton color="inherit">
+              <FaceTwoToneIcon />
           </IconButton>
         </Toolbar>
       </AppBar>

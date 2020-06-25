@@ -17,8 +17,8 @@ const App = () => {
             <Layout>
               <Switch>
                 <ProtectedRoute exact path="/products" component={Products} />
-                <Route exact path="/" component={Dashboard}/>
-                <Route path="*" component={() => "404 NOT FOUND"} />
+                <ProtectedRoute exact path="/" component={Dashboard}/>
+                <ProtectedRoute path="*" component={() => "404 NOT FOUND"} />
               </Switch>
             </Layout>
           </Route>

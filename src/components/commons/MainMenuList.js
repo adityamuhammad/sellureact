@@ -11,7 +11,7 @@ import LayersIcon from '@material-ui/icons/Layers';
 import {withRouter} from 'react-router-dom';
 
 const MainMenuList = (props) => {
-  const [selectedIndex, setSelectedIndex] = React.useState(undefined);
+  const [selectedIndex, setSelectedIndex] = React.useState(-1);
 
   React.useEffect(() => {
     if(props.location.pathname === '/'){
@@ -27,7 +27,7 @@ const MainMenuList = (props) => {
     } else if (props.location.pathname === '/integrations') {
       setSelectedIndex(5);
     } else {
-      setSelectedIndex(undefined);
+      setSelectedIndex(-1);
     }
   }, [props.location.pathname]);
 
@@ -88,7 +88,7 @@ const MainMenuList = (props) => {
         button
         component={Link}
         to="/reports"
-        selected={selectedIndex === 4 || props.location.pathname === "/reports"}
+        selected={selectedIndex === 4}
         onClick={(event) => handleListItemClick(event, 4)}
       >
         <ListItemIcon>
